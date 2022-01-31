@@ -13,16 +13,18 @@ export default {
   mounted() {
     axios
     .get('https://coronavirusapifr.herokuapp.com/data/live/france')
-    .then((response) => {
-      this.statistics = response;
-      console.log(this.statistics)
-    })
+    .then((response) => this.statistics = response.data)
   }
 }
 </script>
 
 <template>
 <h1> Date </h1>
+<div v-for="(statistic,index) in statistics" :key="index">
+  <p> {{statistic.date}} </p>
+  <p> {{statistic.date ? statistic.date : null}} </p>
+  
+</div>
 </template>
 
 <style scoped>
