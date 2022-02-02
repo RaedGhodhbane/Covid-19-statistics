@@ -20,6 +20,7 @@ export default {
 <template>
   <div v-for="(statistic, index) in statistics" :key="index">
     <h1>Statistiques sur le COVID-19 en France</h1>
+    <br />
     <p>Date : {{ statistic.date }}</p>
     <p>
       Taux de positivité : {{ statistic.tx_pos ? statistic.tx_pos : "null" }}
