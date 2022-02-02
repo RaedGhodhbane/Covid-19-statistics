@@ -95,4 +95,9 @@ export default {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  font-weight: bold;
+  font-size: large;
+}
+</style>
